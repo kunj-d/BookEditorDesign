@@ -8,6 +8,7 @@ import MainCanvas from "@/components/main";
 import EditorFooter from "@/components/EditorFooter";
 import Preview from "@/components/Preview";
 import ImageHeaderBar from "@/components/ImageHeaderBar";
+import TemplateToolPanel from "@/components/TemplateToolPanel";
 
 export default function Home() {
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -26,7 +27,9 @@ export default function Home() {
                 </div>
 
                 <div className="w-[21.75%] transition-all duration-300 h-full shrink-0 ">
-                    <ToolPanel />
+                    <TemplateToolPanel />
+                    {/*<ToolPanel /> */}
+
                 </div>
 
                 <div className="w-[61.50%] flex flex-col flex-1 min-w-0 min-h-0 transition-all duration-300">
@@ -35,7 +38,7 @@ export default function Home() {
                         <div className="flex flex-col flex-1 min-w-0 min-h-0">
                             <div className="h-[8%] shrink-0 flex items-center justify-center">                                
                                  {/* <CanvasHeaderBar />*/}
-                               <ImageHeaderBar /> 
+                                 <ImageHeaderBar /> 
                             </div>
                             <div className="flex-1 min-h-0 min-w-0 overflow-hidden flex items-center justify-center">
                                 <MainCanvas  />
@@ -56,7 +59,3 @@ export default function Home() {
         </div>
     );
 }
-
-
-
-
