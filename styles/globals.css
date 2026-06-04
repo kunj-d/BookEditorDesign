@@ -29,8 +29,9 @@
   --kd-accent-secondary: #6e67e3;
 
   --kd-btn-primary-bg: #ffffff;
-  --kd-btn-primary-text: #ffffff;
+  --kd-btn-primary-text: #ffffff;  
   --kd-btn-primary-hover: #744b2f;
+  --kd-btn-secondary-hover:#000000;
   --kd-heder-btn-hover-bg: #ffffff33;
 
   --kd-active-bg: #2a2a2a;
@@ -143,8 +144,6 @@ textarea.kd-border-primary:focus {
 .kd-slide-active {
   border-color: var(--kd-accent-primary);
 }
-
-
 
 .kd-btn {
   opacity: 1;
@@ -565,3 +564,46 @@ textarea.kd-border-primary:focus {
 .kd-imageTool-paginationButton:hover {background: #f3f4f6;}
 .kd-imageTool-pageText {font-size: 12px;font-weight: 500;color: var(--kd-text-black);}
 /* ======================IMAGE TOOL PANEL END HERE========================== */
+
+
+
+/*================Text Toolbar=========================*/
+/* Purple range slider */
+.kd-text-align-icon-btn {
+    color: var(--kd-text-muted);
+    transition: color 0.2s ease-in-out;
+}
+
+.kd-text-align-icon-btn:hover svg {
+    color: var(--kd-btn-secondary-hover);
+}
+.range-purple {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 3px;
+  border-radius: 6px;
+  outline: none;
+  background: #e5e7eb;
+}
+
+/* Track fill (we will override dynamically via inline style only for background) */
+
+/* Thumb (circle) */
+.range-purple::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--kd-bg-secondary);
+  cursor: pointer;
+}
+
+.range-purple::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background:var(--kd-bg-secondary);
+  cursor: pointer;
+  border: none;
+}
