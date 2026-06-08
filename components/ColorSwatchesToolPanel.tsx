@@ -48,47 +48,28 @@ export default function ColorSwatchesToolPanel() {
   });
 
   return (
-    <div className="h-full flex flex-col overflow-hidden kd-toolpanel-borderRight">
-
-      {/* HEADER */}
+    <div className="kd-toolpanel-borderRight h-full flex flex-col overflow-hidden ">
       <div className="shrink-0 p-5">
-        <h2 className="text-sm font-semibold text-[#333333] mb-4">
-          Color
-        </h2>
-        <hr className="border-[#D9D9D9]" />
+        <h2 className="kdColorTextTitle text-sm font-semibold mb-4">Color</h2>
+        <hr className="hr-border" />
       </div>
-
-      {/* BODY */}
-      <div className="flex-1 overflow-y-auto px-5 pb-5 kd-scrollbody-pd_xy">
-
+      <div className="kd-scrollbody-pd_xy flex-1 overflow-y-auto px-5 pb-5 ">
         {/* SEARCH */}
         <div className="relative mb-5">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full h-[42px] rounded-[8px] border border-[#D9D9D9] bg-[#F5F5F5] pl-4 pr-10 text-sm text-[#333333] outline-none"
-          />
-
-          <div className="absolute right-3 top-1/2 -translate-y-1/2 text-[#666]">
-            <ImageSearchIcon />
-          </div>
+          <input type="text" placeholder="Search..." className="kd-imageTool-searchWrapper w-full rounded-lg text-sm outline-none"/>
+          <div className="absolute right-3 top-1/2 -translate-y-1/2 kdColorTextTitle"><ImageSearchIcon /></div>
         </div>
-
         {/* RECENT COLORS */}
         <div className="mb-4">
-          <p className="text-[12px] font-semibold text-[#333333] mb-2">Color Recent</p>
+          <p className="kdColorTextTitle text-xs font-semibold mb-2">Color Recent</p>
           <div className="grid grid-cols-7 gap-2">
             {colors.map((color, index) => {
               if (color === "ADD_COLOR") {
                 return (
-                  <button
+                  <button 
                     key={index}
-                    type="button"
-                    className="w-7 h-7 rounded-[8px] flex items-center justify-center bg-[conic-gradient(from_180deg_at_50%_50%,#ff6b6b,#ffd93d,#6bff95,#4fc3f7,#8b5cf6,#ff6b6b)]"
-                  >
-                    <div className="w-5 h-5 rounded-sm bg-white flex items-center justify-center">
-                      <KdColorPlusIcon />
-                    </div>
+                    type="button" className="kdColorPlusIcon-backbg w-7 h-7 rounded-lg flex items-center justify-center">
+                    <div className="kdColorPlusIcon-bg w-5 h-5 rounded-sm  flex items-center justify-center"><KdColorPlusIcon /></div>
                   </button>
                 );
               }
@@ -107,11 +88,7 @@ export default function ColorSwatchesToolPanel() {
                       value: color,
                     })
                   }
-                  className={`w-7 h-7 rounded-[8px] border transition-all ${
-                    isSelected
-                      ? "border-[#8B5CF6] border-2"
-                      : "border-[#D9D9D9]"
-                  }`}
+                  className={`kd-color-box ${isSelected ? "selected" : ""}`}
                   style={{ backgroundColor: color }}
                 />
               );
@@ -119,18 +96,13 @@ export default function ColorSwatchesToolPanel() {
           </div>
         </div>
 
-        <hr className="border-[#D9D9D9] mb-4" />
+        <hr className="hr-border mb-4" />
 
         {/* SOLID COLORS */}
         <div className="mb-4">
           <div className="flex items-center justify-between mb-2">
-            <p className="text-[12px] font-semibold text-[#333333]">
-              Solid Color
-            </p>
-
-            <button className="text-[11px] cursor-pointer">
-              See all
-            </button>
+            <p className="kdColorTextTitle text-xs font-semibold">Solid Color</p>
+            <button className="text-xs cursor-pointer">See all</button>
           </div>
 
           <div className="grid grid-cols-7 gap-2">
@@ -140,7 +112,7 @@ export default function ColorSwatchesToolPanel() {
                 selectedItem.value === color;
 
               return (
-                <button
+               <button
                   key={index}
                   type="button"
                   onClick={() =>
@@ -149,11 +121,7 @@ export default function ColorSwatchesToolPanel() {
                       value: color,
                     })
                   }
-                  className={`w-7 h-7 rounded-[8px] border transition-all ${
-                    isSelected
-                      ? "border-[#8B5CF6] border-2"
-                      : "border-[#D9D9D9]"
-                  }`}
+                  className={`kd-color-box ${isSelected ? "selected" : ""}`}
                   style={{ backgroundColor: color }}
                 />
               );
@@ -161,13 +129,11 @@ export default function ColorSwatchesToolPanel() {
           </div>
         </div>
 
-        <hr className="border-[#D9D9D9] mb-4" />
+        <hr className="hr-border mb-4" />
 
         {/* GRADIENT COLORS */}
         <div className="mb-4">
-          <p className="text-[12px] font-semibold text-[#333333] mb-2">
-            Gradient Colors
-          </p>
+          <p className="kdColorTextTitle text-xs font-semibold mb-2">Gradient Colors</p>
 
           <div className="grid grid-cols-7 gap-2">
             {gradientColors.map((gradient, index) => {
@@ -185,11 +151,7 @@ export default function ColorSwatchesToolPanel() {
                       value: gradient,
                     })
                   }
-                  className={`w-7 h-7 rounded-[8px] transition-all ${
-                    isSelected
-                      ? "ring-2 ring-[#8B5CF6]"
-                      : "border border-[#D9D9D9]"
-                  }`}
+                  className={`kd-color-box ${isSelected ? "selected" : ""}`}
                   style={{ background: gradient }}
                 />
               );

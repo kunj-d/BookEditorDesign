@@ -58,6 +58,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.hr-border{border-color: #D9D9D9;}
 .kd-bg-primary {
   background-color: var(--kd-bg-primary);
 }
@@ -516,7 +517,7 @@ textarea.kd-border-primary:focus {
 
 /* ================= SEARCH ================= */
 
-.kd-imageTool-searchWrapper {display: flex;align-items: center;gap: 8px;padding: 6px 10px;border: 1px solid #e5e7eb;
+.kd-imageTool-searchWrapper {display: flex;align-items: center;gap: 8px;padding: 8px 10px;border: 1px solid #e5e7eb;
   border-radius: 8px;background-color: var(--kd-bg-text);margin-bottom: 10px;}
 .kd-imageTool-input {flex: 1;border:none;outline: none;font-size: 13px;background: transparent;color: var(--kd-text-black);}
 .kd-imageTool-input::placeholder {color: #6b7280;}
@@ -607,3 +608,12 @@ textarea.kd-border-primary:focus {
   cursor: pointer;
   border: none;
 }
+
+
+/*Color Swatches Tool Panel*/
+
+.kdColorTextTitle{color:var(--kd-text-dark);}
+.kdColorPlusIcon-backbg {background: conic-gradient(from 180deg at 50% 50%, #ff6b6b, #ffd93d, #6bff95, #4fc3f7, #8b5cf6, #ff6b6b);}
+.kdColorPlusIcon-bg{background-color: #ffffff;}
+.kd-color-box {width: 1.75rem;height: 1.75rem;border-radius: 0.5rem;border: 1px solid #d9d9d9;transition: all 0.2s ease;}
+.kd-color-box.selected {border: 2px solid #8b5cf6;}
