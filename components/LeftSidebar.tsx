@@ -169,7 +169,7 @@
 import React, { useState } from "react";
 // import useEditorStore from "@/app/Store/editorStore";
 // import useEditorUIStore from "@/app/Store/useEditorUIStore";
-import { ButtonIcon, ElementsIcon, ImageIcon, TemplateIcon, TextIcon, VideoIcon } from "@/lib/icon/icons";
+import { ButtonIcon, ElementsIcon, ImageIcon, TemplateIcon, TextIcon, VideoIcon, WaterMarkIcon } from "@/lib/icon/icons";
  
 const NAV_ITEMS = [
     { panel: "TemplateAddPanel", icon: <TemplateIcon/>, label: "Template" },
@@ -178,6 +178,7 @@ const NAV_ITEMS = [
     { panel: "AddButtonPanel", icon: <ButtonIcon/>, label: "Buttons" },
     { panel: "AddElementPanel", icon: <ElementsIcon />, label: "Elements" },
     { panel: "AddVideoPanel", icon: <VideoIcon />, label: "Videos" },
+    { panel: "AddWaterNark", icon: <WaterMarkIcon />, label: "WaterMark" },
 ];
  
 const Navbar: React.FC = () => {
