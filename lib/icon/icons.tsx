@@ -111,6 +111,34 @@ export const PlusIcon = () => (
     </svg>
 );
 
+
+
+export const KdButtonPlusIcon = ({ style }) => (
+    <svg
+        style={style}
+        width="12"
+        height="12"
+        viewBox="0 0 14 14"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            d="M2.91797 7H11.0846"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M7 2.91699V11.0837"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+    </svg>
+);
+
 export const PageIcon = () => (
     <svg className="kd-footer-symbol-icon" width="12" height="12" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.77778 20C6.77778 21.1046 5.88235 22 4.77778 22H2C0.895433 22 0 21.1046 0 20V13.5789C0 12.4744 0.89543 11.5789 2 11.5789H4.77778C5.88235 11.5789 6.77778 12.4744 6.77778 13.5789V20Z" fill="currentColor" fillOpacity="0.8"/>
@@ -567,4 +595,12 @@ export const KdColorPlusIcon = () => (
 	    <path d="M6.97745 1.93895C6.97745 1.51007 6.63095 1.16357 6.20207 1.16357C5.77319 1.16357 5.42669 1.51007 5.42669 1.93895V5.42816H1.93749C1.50861 5.42816 1.16211 5.77465 1.16211 6.20353C1.16211 6.63242 1.50861 6.97891 1.93749 6.97891H5.42669V10.4681C5.42669 10.897 5.77319 11.2435 6.20207 11.2435C6.63095 11.2435 6.97745 10.897 6.97745 10.4681V6.97891H10.4667C10.8955 6.97891 11.242 6.63242 11.242 6.20353C11.242 5.77465 10.8955 5.42816 10.4667 5.42816H6.97745V1.93895Z" fill="currentColor"/>
     </svg>
 
+);
+
+
+
+export const KdButtonAngleRightIcon = () => (
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+	    <path d="M5.25 10.5L8.75 7L5.25 3.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
 );

@@ -617,3 +617,112 @@ textarea.kd-border-primary:focus {
 .kdColorPlusIcon-bg{background-color: #ffffff;}
 .kd-color-box {width: 1.75rem;height: 1.75rem;border-radius: 0.5rem;border: 1px solid #d9d9d9;transition: all 0.2s ease;}
 .kd-color-box.selected {border: 2px solid #8b5cf6;}
+
+
+/*Buttons Toolbar*/
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:#f1f1f1;
+  border:1px solid #f1f1f1;
+  box-shadow:0px 0px 1px 0px #ccc;
+  border-radius:5px;
+  padding:12px;
+  overflow:hidden;
+  aspect-ratio:1 / 1;
+}
+
+.read-btn {
+  position: relative;
+  width: 113px;
+  height: 34px;
+
+  border: 1px solid #6158d8;
+  border-radius: 17px;
+  outline: none;
+  cursor: pointer;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      #736cf0 0%,
+      #655de3 35%,
+      rgba(101, 93, 227, 0) 75%
+    ),
+    linear-gradient(
+      180deg,
+      #5d56d8 0%,
+      #5049c5 100%
+    );
+
+  color: #fff;
+  font-size: 12px;
+  font-family: sans-serif;
+
+  box-shadow:inset 0 0 12px #08080833, 0 0 2px #0006;
+
+  overflow: hidden;
+}
+
+.read-btn span {
+  position: relative;
+  z-index: 5;
+}
+
+/* Left Cap */
+.read-btn::before {
+  content: "";
+  position: absolute;
+  left: -22px;
+  top: -1px;
+
+  width: 40px;
+  height: 34px;
+
+  border-radius: 50% 0 0 50%;
+
+  background: linear-gradient(
+    90deg,
+    #d8d4ff 0%,
+    #b7b1f4 25%,
+    #9a94ea 55%,
+    #7268de 100%
+  );
+
+  border: 1px solid #6158d8;
+
+  box-shadow:
+    inset -6px 0 10px rgba(255,255,255,.2);
+
+  z-index: 2;
+}
+
+/* Right Cap */
+.read-btn::after {
+  content: "";
+  position: absolute;
+  right: -22px;
+  top: -1px;
+
+  width: 40px;
+  height: 34px;
+
+  border-radius: 0 50% 0 0;
+
+  background: linear-gradient(
+    270deg,
+    #d8d4ff 0%,
+    #b7b1f4 25%,
+    #9a94ea 55%,
+    #7268de 100%
+  );
+
+  border: 1px solid #6158d8;
+
+  box-shadow:
+    inset 6px 0 10px rgba(255,255,255,.2);
+
+  z-index: 2;
+}
+
