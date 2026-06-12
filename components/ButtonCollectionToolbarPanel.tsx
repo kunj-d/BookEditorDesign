@@ -87,7 +87,7 @@ export default function ButtonCollectionToolbarPanel() {
                         <span style={{position: "absolute",left: "0",right: "0",height: "50px",width: "100px",borderRadius: "100%",background: "rgb(207, 219, 255)",pointerEvents: "none",bottom: "25px", }}/>                <span style={{position: "relative",zIndex: 1,}}>Read More</span>
                     </button>
                 </div>
-                {/*Line No. 623 class .btn-wrapper start*/}
+                {/*Line No. 623 class .btn-wrapper  CSS in global.css*/}
                 <div className="btn-wrapper">
                     <button className="read-btn">
                         <span>Read More</span>
